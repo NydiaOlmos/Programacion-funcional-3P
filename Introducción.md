@@ -1,4 +1,4 @@
-# Paradicmas de Programación
+# Paradigmas de Programación
 > Comparación de los paradigmas estructurada, orientado a objetos y funcional.
 
 Mediante la utilización de los 3 paradigmas de programación vistos en la sesión, haga una calculadora con las siguientes opciones: 
