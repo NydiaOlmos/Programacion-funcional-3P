@@ -334,3 +334,52 @@ ok
 * list_to_tuple/1, tuple_to_list/1 
 
 ## Impresión en pantalla
+> io.format
+```
+1> io:format("Hola Mundo"). 
+Hola Mundook 
+2> io:format("Hola Mundo\n"). 
+Hola Mundo 
+ok 
+3> io:format("Hola Mundo~n"). 
+Hola Mundo 
+ok 
+```
+
+**C**
+
+* Representa un caracter que será reemplazado por el valor pasado en la l
+ista como segundo parámetro 
+* antes de la letra puede llevar un par de números separados por un punto
+(.) 
+* El primer número indica el tamaño del campo 
+* Puede llevar un signo positivo o negativo que indica la justificación i
+zquierda o derecha 
+* El segundo número indica las veces que se va a repetir el valor
+```
+1> io:format("[~c]~n",[$a]). 
+[a] 
+ok 
+2> io:format("[~5c]~n",[$a]). 
+[aaaaa] 
+ok 
+3> io:format("[~5.2c]~n",[$a]). 
+[   aa] 
+ok 
+4> io:format("[~-5.2c]~n",[$a]). 
+[aa   ] 
+ok
+```
+
+**E**
+> Notación científica 
+```
+1> io:format("[~7.2e]", [10.1]). 
+[ 1.0e+1]oK
+```
+f
+> Formato de punto fijo 
+```
+2> io:format("[~7.2f]", [10.1]). 
+[  10.10]ok
+```
