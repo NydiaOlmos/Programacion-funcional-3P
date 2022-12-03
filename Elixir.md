@@ -409,7 +409,7 @@ iex(6)>
 > Los números (numbers) pueden ser enteros o flotantes 
 
 iex> is_number(3) \
-true      \    
+true         \
 iex> is_number(3.5) \
 true
 * Integer \
@@ -729,10 +729,10 @@ iex> "Esto es un String" \
 "Esto es un String"
 * Se pueden insertar expresiones en las cadenas (interpolación de cadenas) mediante #{} \
 iex> "El cuadrado de 2 es #{2*2}" \
-"El cuadrado de 2 es 4" \
-• Secuencias de escape:
-– "
-– \" 
+"El cuadrado de 2 es 4" 
+* Secuencias de escape:\
+– "\
+– \" \
 – \t 
 
 *Código fuente*
@@ -868,6 +868,7 @@ iex> x
 3
 ```
 * **Funciones**
+
 *Código fuente*
 ```
 defmodule Calculadora do 
@@ -930,14 +931,14 @@ IO.puts(Numero.cero?("3"))
 ```
 *Salida*
 
->elixir main.ex \
+elixir main.ex \
 true \
 false        \
-No es entero\
+No es entero
 
 ## Condicionales
 ### if
-* **if, ejemplo 1**
+* **if, ejemplo 1**\
 *Código fuente*
 ```
 defmodule Persona1 do 
@@ -961,7 +962,7 @@ iex> Persona1.sexo(:f)
 iex> Persona1.sexo(:x) 
 "Femenino"
 ```
-* **if ejemplo 2**
+* **if ejemplo 2**\
 *Código fuente*
 ```
 defmodule Persona2 do 
@@ -990,7 +991,7 @@ iex> Persona2.sexo(:x)
 ```
 ### case
 
-* **Ejemplo 1**
+* **Ejemplo 1**\
 *Código fuente*
 ```
 defmodule Persona3 do 
@@ -1014,7 +1015,7 @@ iex> Persona3.sexo(:f)
 iex> Persona3.sexo(:x) 
 "Sexo desconocido"
 ```
-* **Match con funciones, ejemplo 1**
+* **Match con funciones, ejemplo 1**\
 *Código fuente*
 ```
 defmodule Persona4 do 
@@ -1041,7 +1042,7 @@ iex> Persona4.sexo(:x)
 "sexo desconocido"
 Match con funciones
 ```
-• Ejemplo 2
+• Ejemplo 2\
 *Código fuente*
 ```
 defmodule Persona5 do 
@@ -1062,7 +1063,7 @@ iex> Persona5.sexo(:x)
 "sexo desconocido"
 ```
 ### cond
-* Ejemplo 1
+* Ejemplo 1\
 *Código fuente*
 ```
 defmodule Persona6 do 
@@ -1199,6 +1200,7 @@ View "epub" docs at "doc/calculadora.epub"
 C:\calculadora>
 ```
 * Pegar la ruta del archivo doc/index.html en la barra de direcciones del navegador 
+
 ![FP con Erlang y Elixir (2)](https://user-images.githubusercontent.com/111654273/205432362-fd4f3267-baa2-41e0-820c-f4bb142931c1.jpg)
 ![FP con Erlang y Elixir (3)](https://user-images.githubusercontent.com/111654273/205432370-2741d6f3-056c-46e9-b3bc-85a400a37a2e.jpg)
 
@@ -1216,15 +1218,15 @@ Randomized with seed 954000
 ```
 
 ### Doctest
-* Se realiza a partir de la documentación de las funciones 
+* Se realiza a partir de la documentación de las funciones \
 ![FP con Erlang y Elixir (4)](https://user-images.githubusercontent.com/111654273/205432406-d33fb641-0167-4ca0-9b64-10b512f7d30d.jpg)
 
 ### Test
-* Se realiza a partir del script del test
+* Se realiza a partir del script del test\
 ![FP con Erlang y Elixir (5)](https://user-images.githubusercontent.com/111654273/205432425-b05ed51b-33b1-40ca-9a77-eaea58c4457c.jpg)
 
 ### case
-* Ejemplo 1
+* Ejemplo 1\
 *Código fuente* 
 ```
 defmodule Matematicas do 
@@ -1247,16 +1249,16 @@ IO.inspect Matematicas.calculadora("/",{5,0})
 IO.inspect Matematicas.calculadora("*",{5,4})
 ```
 *Salida*\
->elixir main.exs \
+elixir main.exs \
 9 \
 1 \
 1.25 \
 "No se puede dividir por 0" \
 20 \
-9\
+9
 
 ### cond
-* Ejemplo 1
+* Ejemplo 1\
 *Código fuente*
 ```
 defmodule DiaSemana do 
@@ -1295,7 +1297,7 @@ Sabado
 Domingo 
 El dia no es valido
 ```
-* Ejemplo 2
+* Ejemplo 2\
 *Código fuente*
 ```
 defmodule DiaSemana do 
@@ -1352,7 +1354,7 @@ Domingo
 El dia no es valido 
 El dia no es valido
 ```
-* Ejemplo 3
+* Ejemplo 3\
 *Código fuente*
 ```
 defmodule DiaSemana do 
@@ -1412,7 +1414,7 @@ Martes
 ```
 ### unless
 
-* Ejemplo 1
+* Ejemplo 1\
 *Código fuente*
 ```
 defmodule MayorDeEdad do 
@@ -1432,7 +1434,7 @@ iex> MayorDeEdad.mayor(16)
 iex> MayorDeEdad.mayor1(18)  
 nil
 ```
-* Ejemplo 2
+* Ejemplo 2\
 *Código fuente*
 ```
 defmodule MayorDeEdad do 
@@ -1466,7 +1468,7 @@ nil
 * Se pueden fijar a variables 
 
 Ejemplos de funciones anónimas
-* Ejemplo 1 
+* Ejemplo 1 \
 *Código fuente*
 ```
 defmodule Calculadora do 
@@ -1507,7 +1509,7 @@ IO.inspect(mayor?.(5,4))
 :no 
 :si
 ```
-* Ejemplo 3
+* Ejemplo 3\
 *Código fuente*
 ```
 mayor? = fn(n1,n2) -> if n1 > n2 do :si else :no end end 
@@ -1522,7 +1524,7 @@ IO.puts res
 no 
 si
 ```
-* Ejemplo 4
+* Ejemplo 4\
 *Código fuente*
 ```
 mayor = fn(n1,n2) -> 
@@ -1544,7 +1546,7 @@ IO.inspect mayor.(5,5)
 {:ok, "5 > 4"} 
 {:error, "5 <= 5"} 
 ```
-* Ejemplo 5
+* Ejemplo 5\
 *Código fuente*
 ```
 mayor = fn(n1,n2) -> 
@@ -1572,7 +1574,7 @@ ok
 ```
 ## Operador Pipe 
 * Dada una lista con n numeros, se desea obtener el cuadrado de la suma de los elementos de la cola. Si la lista es [1,2,3,4,5], el resultado es (2+3+4+5)^2 
-* csc = cuadrado(suma(2,3,4,5))
+* csc = cuadrado(suma(2,3,4,5))\
 *Código fuente*
 ```
 sum = 0 
@@ -1641,7 +1643,7 @@ IO.puts("#{PipeTest.cuadrado(PipeTest.suma(tl([1,2,3,4,5])))}")
 >elixir main.ex 
 196
 ```
-* Solución 2
+* Solución 2\
 *Código fuente*
 ```
 defmodule PipeTest do 
@@ -1666,7 +1668,7 @@ IO.puts("#{PipeTest.csc([1,2,3,4,5])}")
 >elixir main.ex 
 196
 ```
-* Herramienta de depuración (debugging)
+* Herramienta de depuración (debugging)\
 *Código fuente*
 ```
 defmodule PipeTest do 
@@ -1758,8 +1760,8 @@ false
 iex> 20 in rango 
 true
 ```
-* Funciones de Enum 
-![Captura de pantalla 2022-12-03 025815](https://user-images.githubusercontent.com/111654273/205433158-f7bde7d5-717b-43fd-acd0-199e86496a19.png)
+* Funciones de Enum \
+![Captura de pantalla 2022-12-03 025815](https://user-images.githubusercontent.com/111654273/205433158-f7bde7d5-717b-43fd-acd0-199e86496a19.png)\
 ![Captura de pantalla 2022-12-03 025900](https://user-images.githubusercontent.com/111654273/205433162-7fcc81e4-0367-4b19-9877-038b8de45b28.png)
 
 ## for
