@@ -11,6 +11,7 @@ iex()> 5+4;5+1
 * Para salir del shell escribimos System.halt o ctrl + c.
 
 ## Variables
+
 Elixir es un lenguaje de programación de tipado dinámico por lo que:
 - No es necesario declarar el tipo de dato de forma explícita.
 - El tipo se determina de acuerdo al valor contenido.
